@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>Application to predict housing prices</h3>
+  <ol>
+<li>As a real estate broker or as a person wanting to buy / sell a house, you would like to know the selling price of the house</li>
+<li>Using historical price data, we can predict the selling price of a house given the features</li>
+<li>In this particular application, the square feet of the house and number of bedrooms are taken as input variables for prediction</li>
+</ol>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Relationship between price and square feet</h3>
+  <pre><code class="r">with(historical_prices,plot(sqfeet,price,xlab=&quot;Square feet&quot;,ylab=&quot;Price&quot;))
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+</article>
+
+<article class="" id="slide-3" style="background:;">
+  <h3>Relationship between price and number of bedrooms</h3>
+  <pre><code class="r">with(historical_prices,plot(numbedrooms,price,xlab=&quot;No.of bedrooms&quot;,ylab=&quot;Price&quot;))
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+</article>
+
+<article class="" id="slide-4" style="background:;">
+  <h3>How the Prediction is carried out?</h3>
+  <ol>
+<li><p>Using historical data, a multiple linear regression model is created utilizing the &#39;lm&#39; function in R</p></li>
+<li><p>For any value that is provided by the user for area in square feet and number of bedrooms, the model predicts the price of the house</p></li>
+<li><p>This price can be used by the user to take appropriate decisions</p></li>
+</ol>
+
+</article>
+
+<article class="" id="slide-5" style="background:;">
+  <h3>Supervised Learning vs Unsupervised Learning</h3>
+  <ol>
+<li><p>Multiple linear regression falls in the category of &#39;Supervised Learning&#39; and it is typically used for predicting continuous variables</p></li>
+<li><p>To use the linear regression model, the pre-requisite is that the response variable should be normally distributed</p></li>
+<li><p>If the distribution is not normal, then a &#39;Generalized Linear Model&#39; should be used</p></li>
+<li><p>&#39;Unsupervised Learning&#39; is used in cases where the output variable does not have labels associated with it</p></li>
+</ol>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
